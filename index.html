@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./fiterCard.js"></script>
+    <style>
+        .new_user{
+            display: flex;
+            /* flex-direction: row; */
+           
+
+        }
+        .input_detail{
+        
+            /* height:56px;
+            width:auto; */
+            /* gap:10px; */
+            justify-content: space-evenly;
+        }
+        body{
+            margin:0%;
+            padding:0%;
+            background-color: black;
+
+        }
+        .container{
+            margin:10%;
+            padding:10%;
+        }
+    
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div>Filter UI cards by their profession</div>
+      <div>
+        <div>
+          <select>
+            <option value="">profession</option>
+            <option value="">Developer</option>
+            <option value="">Admin</option>
+          </select>
+        </div>
+      
+        <div class="detail">
+        
+          <div class="card" style="color: white">1</div>
+
+          <div style="color: white">Name:</div>
+
+          <div style="color: white">profession:</div>
+
+          <div style="color: white">Age</div>
+        </div>
+
+        <div>
+          <div><button type="button" class="filter">filter</button></div>
+        </div>
+        <div>Add a new user</div>
+        <div class="new_user">
+          <div class="input_detail">
+            <div>
+              <label for="name" style="color: white">Enter Name</label>
+            </div>
+
+            <div><input type="text" /></div>
+          </div>
+          <div  class="input_detail">
+            <div>
+              <label for="name" style="color: white">Enter Profession</label>
+            </div>
+            <div><input type="text" /></div>
+          </div>
+          <div  class="input_detail">
+            <div>
+              <label for="name" style="color: white">Enter Age</label>
+            </div>
+            <div><input type="text" /></div>
+          </div>
+        </div>
+      </div>
+      <div  class="input_detail">
+        <div>
+          <input type="button" value="Add User" />
+        </div>
+      </div>
+    </div>
+   
+   
+  </body>
+</html>
