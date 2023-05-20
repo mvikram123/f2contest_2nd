@@ -1,95 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script src="./fiterCard.js"></script>
     <style>
-        .new_user{
-            display: flex;
-            /* flex-direction: row; */
-           
+      #filterSection,
+#addUserSection {
+  margin-bottom: 10px;
+  color: white;
+  background-color: black;  
+}
 
-        }
-        .input_detail{
-        
-            /* height:56px;
-            width:auto; */
-            /* gap:10px; */
-            justify-content: space-evenly;
-        }
-        body{
-            margin:0%;
-            padding:0%;
-            background-color: black;
+ .addUser{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding:10px;
+    border-radius: 5px;
+}
 
-        }
-        .container{
-            margin:10%;
-            padding:10%;
-        }
-    
+#usersSection {
+  margin-top: 20px;
+  color: white;
+}
+
+#userList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.userCard {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex; 
+  padding: 10px;
+  margin: 5px;
+  width: 500px;
+  height: 30px;
+}
+
+.userCard p {
+  display: inline;
+  margin-top:-10px;
+  padding: 20px; 
+  justify-content: space-between;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border: 4px solid black;
+}
+
+button:hover, .addUser:hover{
+    border: 2px solid blue;
+}
+
+body{
+    background-color: black;
+}
+
     </style>
-  </head>
+</head>
+<body>
 
-  <body>
-    <div class="container">
-      <div>Filter UI cards by their profession</div>
-      <div>
-        <div>
-          <select>
-            <option value="">profession</option>
-            <option value="">Developer</option>
-            <option value="">Admin</option>
-          </select>
-        </div>
+    <h3 style="color:white;">Filter ui cards via their profession.</h3>
+    
+    <div id="filterSection">
+        <label for="profession"></label>
+        <select id="profession">
+          <option value="">Profession</option>
+          <option value="developer">Developer</option>
+          <option value="admin">Admin</option>
+        </select>  
+      </div>
+    
       
-        <div class="detail">
-        
-          <div class="card" style="color: white">1</div>
-
-          <div style="color: white">Name:</div>
-
-          <div style="color: white">profession:</div>
-
-          <div style="color: white">Age</div>
-        </div>
-
-        <div>
-          <div><button type="button" class="filter">filter</button></div>
-        </div>
-        <div>Add a new user</div>
-        <div class="new_user">
-          <div class="input_detail">
-            <div>
-              <label for="name" style="color: white">Enter Name</label>
-            </div>
-
-            <div><input type="text" /></div>
-          </div>
-          <div  class="input_detail">
-            <div>
-              <label for="name" style="color: white">Enter Profession</label>
-            </div>
-            <div><input type="text" /></div>
-          </div>
-          <div  class="input_detail">
-            <div>
-              <label for="name" style="color: white">Enter Age</label>
-            </div>
-            <div><input type="text" /></div>
-          </div>
-        </div>
+    
+      <div id="usersSection">
+        <div id="userList"></div>
+        <button id="filterBtn">Filter</button>
       </div>
-      <div  class="input_detail">
-        <div>
-          <input type="button" value="Add User" />
-        </div>
+
+      
+
+      <div id="addUserSection">
+        <h3>Add a New User</h3>
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" class="addUser">
+
+        <label for="profession">Enter Profession</label>
+        <select id="addProfession" class="addUser">
+          <option value=""></option>
+          <option value="developer">Developer</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="age">Enter Age</label>
+        <input type="number" id="age" class="addUser">
+        <br>
+        <button id="addUserBtn">Add User</button>
       </div>
-    </div>
-   
-   
-  </body>
+    
+      <script src="fiterCard.js"></script>
+
+</body>
 </html>
